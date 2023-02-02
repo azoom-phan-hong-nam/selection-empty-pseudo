@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selection & empty pseudo</title>
+    <style>
+      body {
+        max-width: 400px;
+      }
+
+      .highlight::selection {
+        background-color: yellow;
+        color: red;
+      }
+
+      ul > li:empty {
+        width: 100px;
+        background-color: royalblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Selection & empty pseudo</h1>
+    <h2>Selection pseudo</h2>
+    <p>
+      Double click or drag the mouse paragraph below to select text. The
+      selected text will be highlighted.
+    </p>
+    <p class="highlight">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
+      autem animi eaque corrupti modi beatae mollitia numquam in obcaecati rem
+      neque nam, itaque et? Ipsam blanditiis maiores debitis explicabo
+      excepturi!
+    </p>
+    <h2>Empty pseudo</h2>
+    <p>Empty <code>li</code> tag has background royalblue</p>
+    <ul>
+      <li>1</li>
+      <li></li>
+      <li>3</li>
+      <li>4</li>
+      <li></li>
+    </ul>
+  </body>
+</html>
